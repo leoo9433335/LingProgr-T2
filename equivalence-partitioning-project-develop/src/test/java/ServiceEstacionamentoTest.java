@@ -11,7 +11,7 @@ public class ServiceEstacionamentoTest {
     ServiceEstacionamento service = new ServiceEstacionamento();
 
     // Caso de Teste 1
-    @Test
+    @Test 
     public void testeCortesia() throws Exception {
         Date entrada = new SimpleDateFormat("yyyy-MM-dd HH:mm").parse("2023-09-24 08:00");
         Date saida = new SimpleDateFormat("yyyy-MM-dd HH:mm").parse("2023-09-24 08:15");
@@ -60,4 +60,6 @@ public class ServiceEstacionamentoTest {
         double resultado = service.calculaTarifa(false, entrada, saida);
         assertEquals(10.40, resultado, 0.01);
     }
+
+    
 }
