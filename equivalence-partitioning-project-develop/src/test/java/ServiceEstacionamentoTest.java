@@ -1,10 +1,10 @@
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.example.ServiceEstacionamento;
-import org.junit.jupiter.api.Test;
-
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
+import org.example.ServiceEstacionamento;
+import org.junit.jupiter.api.Test;
 
 public class ServiceEstacionamentoTest {
 
