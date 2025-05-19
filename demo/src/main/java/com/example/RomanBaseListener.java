@@ -1,10 +1,9 @@
-package com.example;
 // Generated from Roman.g4 by ANTLR 4.13.0
+package com.example;
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
 import org.antlr.v4.runtime.tree.TerminalNode;
-import com.example.RomanListener; // Ensure RomanListener is correctly imported
 
 /**
  * This class provides an empty implementation of {@link RomanListener},

@@ -9,6 +9,30 @@ public class RomanDecoder extends RomanBaseVisitor<Integer> {
     
 private static int sum(List<Integer> nums) {
     if (nums == null || nums.isEmpty()) return 0;
+
+    // Validação 1: não mais que 3 repetições seguidas do mesmo valor
+    int repeatCount = 1;
+    for (int i = 1; i < nums.size(); i++) {
+        if (nums.get(i).equals(nums.get(i - 1))) {
+            repeatCount++;
+            if (repeatCount > 3) {
+                throw new IllegalArgumentException("Número romano inválido: mais de 3 repetições seguidas.");
+            }
+        } else {
+            repeatCount = 1;
+        }
+    }
+
+    // Validação 2: subtrações inválidas (ex: I antes de L ou C)
+    for (int i = 0; i < nums.size() - 1; i++) {
+        int current = nums.get(i);
+        int next = nums.get(i + 1);
+        if (current < next && (current * 10 < next)) {
+            throw new IllegalArgumentException("Número romano inválido: subtração não permitida.");
+        }
+    }
+
+    // Cálculo conforme seu algoritmo original
     int sum = nums.get(nums.size() - 1);
     for (int i = 0; i < nums.size() - 1; i++) {
         int current = nums.get(i);
@@ -19,6 +43,7 @@ private static int sum(List<Integer> nums) {
             sum += current;
         }
     }
+
     return sum;
 }
 

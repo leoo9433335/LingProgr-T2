@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) throws Exception {
         test("MMMCMLXI", 3961);
         test("MCMXC", 1990);
-        test("MMVIII", 2008);
+        test("MMVIIII", 2008);
         test("MCMLIV", 1954);
     }
 
